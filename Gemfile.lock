@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    simplecast (0.0.1)
+      hurley
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    hurley (0.1)
+    rake (10.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.7)
+  rake (~> 10.0)
+  simplecast!
