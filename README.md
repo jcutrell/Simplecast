@@ -1,6 +1,8 @@
 # Simplecast
 
-TODO: Write a gem description
+Simplecast is awesome. So is Ruby. Use them both. Profit.
+
+Note: Publishing is not currently supported by the Simplecast API, and thus is also not supported by this gem. It probably will be one day. Who knows?
 
 ## Installation
 
@@ -59,7 +61,7 @@ Simplecast::Client::Statistic.for_episode(episode_id, podcast_id: nil, opts: {})
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/simplecast/fork )
+1. Fork it ( https://github.com/jcutrell/simplecast/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
