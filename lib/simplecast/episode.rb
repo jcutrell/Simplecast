@@ -5,5 +5,8 @@ module Simplecast
     def embed
       Simplecast::Client::Episode.embed(id)
     end
+    def podcast
+      Simplecast::Client::Podcast.find(podcast_id)
+    end
   end
 end
