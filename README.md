@@ -20,7 +20,42 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Set up the gem in a config file (if you're using Rails, just add something like a simplecast.rb in initializers).
+
+Right now, there are only two config options: `api_key` and `podcast_id`. Your API key can be found in your [account settings](https://simplecast.fm/user/edit).
+
+Your `podcast_id` is in the URL for your account, and is likely just a number.
+
+```ruby
+Simplecast.configure do |c|
+  c.api_key "Your_api_key_here"
+  c.podcast_id "Your_podcast_id_here"
+end
+```
+
+Next, you can access Podcasts, Episodes, and Statistics like this:
+
+```ruby
+# Episodes
+Simplecast::Client::Episode.all # gets all podcasts, as long as podcast_id was set in the config
+Simplecast::Client::Episode.all(podcast_id) # gets all podcasts, as long as podcast_id was set in the config
+Simplecast::Client::Episode.find(episode_id)
+Simplecast::Client::Episode.find(episode_id, podcast_id)
+
+# Podcast
+Simplecast::Client::Podcast.all
+Simplecast::Client::Podcast.find(podcast_id)
+
+# Statistics
+# the overall method takes timeframe parameters as defined at https://api.simplecast.fm - /podcasts/:podcast_id/statistics/overall.json 
+Simplecast::Client::Statistic.overall(podcast_id, options:{})
+
+# returns listener stats. /podcasts/:podcast_id/statistics.json
+Simplecast::Client::Statistic.all(podcast_id)
+
+# returns stats for a given episode. Takes timeframe params. /podcasts/:podcast_id/statistics/episode.json
+Simplecast::Client::Statistic.for_episode(episode_id, podcast_id: nil, opts: {})
+```
 
 ## Contributing
 
