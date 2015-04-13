@@ -25,7 +25,6 @@ module Simplecast
       response.data
     end
     def get(url)
-      puts "Log request: #{url.inspect}"
       response = @client.get(url)
       JSON.parse(response.body)
     end
