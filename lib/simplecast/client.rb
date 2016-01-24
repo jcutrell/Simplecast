@@ -9,7 +9,7 @@ module Simplecast
       Simplecast::Configurable.keys.each do |key|
         instance_variable_set(:"@#{key}", options[key] || Simplecast.instance_variable_get(:"@#{key}"))
       end
-      @client = Hurley::Client.new('https://api.simplecast.fm/v1/')
+      @client = Hurley::Client.new('https://api.simplecast.com/v1/')
       @client.header["X-API-KEY"] = @api_key
       @client
     end

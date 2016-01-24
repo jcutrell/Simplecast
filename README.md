@@ -24,7 +24,7 @@ Or install it yourself as:
 
 Set up the gem in a config file (if you're using Rails, just add something like a simplecast.rb in initializers).
 
-Right now, there are only two config options: `api_key` and `podcast_id`. Your API key can be found in your [account settings](https://simplecast.fm/user/edit).
+Right now, there are only two config options: `api_key` and `podcast_id`. Your API key can be found in your [account settings](https://simplecast.com/user/edit).
 
 Your `podcast_id` is in the URL for your account, and is likely just a number.
 
@@ -49,7 +49,7 @@ Simplecast::Client::Podcast.all
 Simplecast::Client::Podcast.find(podcast_id)
 
 # Statistics
-# the overall method takes timeframe parameters as defined at https://api.simplecast.fm - /podcasts/:podcast_id/statistics/overall.json 
+# the overall method takes timeframe parameters as defined at https://api.simplecast.com - /podcasts/:podcast_id/statistics/overall.json 
 Simplecast::Client::Statistic.overall(podcast_id, options:{})
 
 # returns listener stats. /podcasts/:podcast_id/statistics.json
