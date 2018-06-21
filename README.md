@@ -1,5 +1,8 @@
 # Simplecast
 
+##Note: This gem is untested and currently unmaintained.
+With Simplecast being under new leadership, I've spoken with their team about upcoming API changes. Instead of focusing on developing this gem more completely under the current API, I've chosen to wait until the new changes are released. This gem (or a version of it, anyway) powers [Spec.fm](https://spec.fm), but I recommend testing thoroughly. Optionally, use Simplecast's already-supported RSS feed as a reliable (albeit limited) alternative.
+
 Simplecast is awesome. So is Ruby. Use them both. Profit.
 
 Note: Publishing is not currently supported by the Simplecast API, and thus is also not supported by this gem. It probably will be one day. Who knows?
